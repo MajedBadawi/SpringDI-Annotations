@@ -1,13 +1,13 @@
 package com.majedbadawi.springAnnotations;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class AnnotationsSpringApp {
+public class JavaConfigSpringApp {
 	public static void main(String[] args) {
-		System.out.println("Annotations in Spring\n");
+		System.out.println("Spring Container configuration using Java code only\n");
 		
-		//read spring config file
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		//read spring config java class
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
 		
 		System.out.println("DI using constructor");
 		//get the bean from the spring container
